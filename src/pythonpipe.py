@@ -2,7 +2,7 @@
 import threading, subprocess, time, os, json
 from sys import exit, stdout, argv
 
-VERSION = '2.2'
+VERSION = '2.21'
 if len(argv) > 1:
     if 'version' in argv[1]:
         print('PythonPipe UCI AutoLogger & Engine Controller')
@@ -166,6 +166,9 @@ def blockData(chan):
                     getuci = True
                 elif line[:7] == 'option ':
                     opbuff.append(line)
+                else:
+                    f.write('# '+line + '\r\n')
+                    f.flush()
 
 safeQuit=False
 

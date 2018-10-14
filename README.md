@@ -22,7 +22,7 @@ Mailbox: rainydew@qq.com  or  lucy01128@gmail.com
 ## CuteChess国际象棋比赛套件工具，支持引擎日志，断点续赛，UCI集成配置和PGN核对、登分等功能
 
 编译需要的环境：
-python 2.1.15 32位(不要使用64位，因为不能打包成单个文件)
+python 2.7.15 32位(不要使用64位，因为不能打包成单个文件)
 
 依赖包下载：
 pip install easygui

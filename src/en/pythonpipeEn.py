@@ -200,7 +200,7 @@ def watchdog(chan):
     waiter = False
     f.close()
     pid = os.getpid()
-    os.system('taskkill /pid %d /f>nul' % pid)  # 这里是线程内，exit(0)不起作用，只能用命令行杀掉自己
+    os.system('taskkill /pid %d /f>nul' % pid)  # In inner thread, exit(0) won't work. Better call cmd to do this
 
 
 switch = getcommon()  # If here occurs an error, we don't need to open a child process. So keep this line here
